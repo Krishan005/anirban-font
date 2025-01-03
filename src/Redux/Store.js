@@ -2,15 +2,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import dataReducer from './dataSlices';
 import getAllEmployeeSlice from './getAllEmployeeSlice';
-import createNewEmployeeSlices from './createEmployeeSlices';
+import employeeAddAndEditSlices from './EmployeeAddAndEditSlices';
 import uplaodImageSlice from './UplaodImageSlices';
 
 const store = configureStore({
   reducer: {
-        data: dataReducer, // Add your reducers here,
-        allemployees: getAllEmployeeSlice,
-        newEmployees: createNewEmployeeSlices,
-      uploadImage: uplaodImageSlice
+    data: dataReducer, // Add your reducers here,
+    allemployees: getAllEmployeeSlice,
+    addAndEditEmployees: employeeAddAndEditSlices,
+    uploadImage: uplaodImageSlice
   },
 });
 

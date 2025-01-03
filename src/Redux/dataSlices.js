@@ -7,7 +7,7 @@ export const fetchData = createAsyncThunk(
   'data/fetchData',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/organization-tree`); // Replace with your API endpoint
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/admin/organization-tree`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -19,7 +19,7 @@ const dataSlice = createSlice({
   name: 'data',
   initialState: {
     items: [],
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+    status: 'idle',
     error: null,
   },
   reducers: {},

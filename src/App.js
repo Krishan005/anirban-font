@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import List from './Employee/List';
+import List from './pages/employees/List';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-  <List/>
+    <Routes>
+      <Route path='/' element={<List />} />
+    </Routes>
   );
 }
 

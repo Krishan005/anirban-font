@@ -6,7 +6,7 @@ export const uploadImage = createAsyncThunk(
   'data/upload',
   async (data, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_FILEUPLOAD_URL}/upload-image`, data); // Replace with your API endpoint
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/upload-image`, data); // Replace with your API endpoint
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
